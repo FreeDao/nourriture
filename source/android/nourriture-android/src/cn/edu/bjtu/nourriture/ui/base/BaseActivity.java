@@ -139,7 +139,7 @@ public abstract class BaseActivity extends Activity {
 	}
 	
 	protected void DisPlay(String content){
-		Toast.makeText(this, content, 1).show();
+		Toast.makeText(this, content, Toast.LENGTH_SHORT).show();
 	}
 
 	/**加载进度条*/
@@ -181,7 +181,7 @@ public abstract class BaseActivity extends Activity {
 	}
 
 	
-//獲得設備信息
+	//獲得設備信息
 	protected String getDeviceId() throws Exception {
 		String deviceId=tManager.getDeviceId();
 		
@@ -214,7 +214,7 @@ public abstract class BaseActivity extends Activity {
 		return Locale.getDefault().getLanguage();
 	}
 	
- protected String getCountry() {
+	protected String getCountry() {
 		
 		return Locale.getDefault().getCountry();
 	}

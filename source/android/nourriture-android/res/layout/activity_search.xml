@@ -41,46 +41,53 @@
             android:paddingRight="10dp"
             android:src="@drawable/android_search_icon" />
     </LinearLayout>
-
-     <ListView
+    <ListView
         android:id="@+id/search_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/search_top_layout"
-        android:divider="@null"
+        android:layout_height="wrap_content"
         android:dividerHeight="0dp"
         android:listSelector="@null"
         android:scrollbars="none"
-        android:visibility="gone" /> 
+        android:visibility="gone"/>
+    <View 
+        style="@style/SearchLine"
+        android:visibility="gone"/>
+    <RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="50dp"
+	    android:padding="10dp"
+	    android:background="@drawable/bg_search_list"
+	    android:visibility="gone">   
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="清空历史记录"
+	        android:drawableLeft="@drawable/ic_clear_search_history"
+	        android:layout_centerInParent="true"/> 
+	</RelativeLayout>
+	<View style="@style/SearchLine"/>	    
 
-<LinearLayout
+    <LinearLayout
         android:id="@+id/layout_login"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="vertical" >
-
-    
-    
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:layout_gravity="center"
-        android:background="@drawable/joy_icon" />
+        android:orientation="vertical"
+        android:visibility="visible">
+	    <ImageView
+	        android:id="@+id/logo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="35dp"
+	        android:layout_gravity="center"
+	        android:background="@drawable/joy_icon" />
         
-          <TextView 
+        <TextView 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:paddingTop="20dp"
-           android:layout_gravity="center"
-            android:text="@string/search_info"
-            />
+            android:layout_gravity="center"
+            android:text="@string/search_info"/>
         
-    </LinearLayout>
-        
-      
-
-        
+    </LinearLayout>      
 </LinearLayout>
